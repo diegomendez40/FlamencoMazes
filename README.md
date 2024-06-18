@@ -1,2 +1,2 @@
 # FlamencoMazes
-A FlamencoWitches-styled Mazes games with an autosolver option.
+A FlamencoWitches-styled Mazes game with an autosolver option.
