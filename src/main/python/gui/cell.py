@@ -10,7 +10,7 @@ class Cell:
             x2: int,
             y1: int,
             y2: int,
-            win: Window,
+            win: Window = None,
             left_wall: bool = True,
             right_wall: bool = True,
             top_wall: bool = True,
