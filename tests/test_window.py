@@ -5,7 +5,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 from gui import Line, Point, Window
 
 def main() -> None:
-    win = Window(800, 600)
+    win = Window(800, 600, title="Testing Window")
+    # Test draw_line
     point1 = Point(50, 50)
     point2 = Point(60, 95)
     point3 = Point(450, 400)

@@ -16,11 +16,13 @@ class Cell:
             top_wall: bool = True,
             bottom_wall: bool = True
             ):
+        # x1,y1 -> top-left corner
+        # x2,y2 -> bottom-right
         self.has_left_wall = left_wall
         self.has_right_wall = right_wall
         self.has_top_wall = top_wall
         self.has_bottom_wall = bottom_wall
-        self._x1 = x1
+        self._x1 = x1     
         self._x2 = x2
         self._y1 = y1
         self._y2 = y2
@@ -33,22 +35,22 @@ class Cell:
             line = Line(pointUL, pointLL)
             self._win.draw_line(line)
 
-        if self.has_left_wall:
-            pointUL = Point(self._x1, self._y1)
-            pointLL = Point(self._x1, self._y2)
-            line = Line(pointUL, pointLL)
+        if self.has_right_wall:
+            pointUR = Point(self._x2, self._y1)
+            pointLR = Point(self._x2, self._y2)
+            line = Line(pointUR, pointLR)
             self._win.draw_line(line)
 
-        if self.has_left_wall:
+        if self.has_top_wall:
             pointUL = Point(self._x1, self._y1)
-            pointLL = Point(self._x1, self._y2)
-            line = Line(pointUL, pointLL)
+            pointUR = Point(self._x2, self._y1)
+            line = Line(pointUL, pointUR)
             self._win.draw_line(line)
 
-        if self.has_left_wall:
-            pointUL = Point(self._x1, self._y1)
+        if self.has_bottom_wall:
             pointLL = Point(self._x1, self._y2)
-            line = Line(pointUL, pointLL)
+            pointLR = Point(self._x2, self._y2)
+            line = Line(pointLL, pointLR)
             self._win.draw_line(line)
 
         
