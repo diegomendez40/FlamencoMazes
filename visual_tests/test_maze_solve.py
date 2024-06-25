@@ -8,6 +8,7 @@ def main() -> None:
     win = Window(800, 600, title="Testing Cell")
     # Test Maze: init, create_cells, draw_cell, animate
     maze = Maze(50, 125, 12, 22, 30, 30, win)
+    print(f"Solved successfully: {maze.solve()}")
     win.wait_for_close()
 
 
