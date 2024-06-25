@@ -15,6 +15,7 @@ def main() -> None:
     cell1.draw()
     cell2 = Cell(point3.x, point4.x, point3.y, point4.y, win, right_wall=False, left_wall=False)
     cell2.draw()
+    cell1.draw_move(cell2)
     win.wait_for_close()
 
 
