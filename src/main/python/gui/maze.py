@@ -23,6 +23,14 @@ class Maze:
         self._win = win
         self._create_cells()
 
+
+    def _break_entrance_and_exit(self) -> None:
+            self._cells[0][0].has_left_wall = False
+            self._cells[self.num_rows - 1][self.num_cols - 1].has_right_wall = False
+            self._draw_cell(0, 0)
+            self._draw_cell(self.num_rows - 1, self.num_cols - 1)
+
+
     def _create_cells(self) -> None:
         self._cells = []
         for row in range(self.num_rows):
