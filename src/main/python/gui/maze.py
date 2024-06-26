@@ -126,7 +126,6 @@ class Maze:
             feasible_move = False
             if ( 0 <= i + direction[0] <= i_max) and (0 <= j + direction[1] <= j_max):
                 if ( self._cells[i + direction[0]][j + direction[1]].visited == False ):
-                    # TODO: Finish this algorithm as per https://www.boot.dev/lessons/cd9b1811-98ca-496f-a391-86e102cdcf80
                     match direction:
                         case (-1, 0):   # LEFT
                             if self._cells[i][j].has_left_wall == False and self._cells[i-1][j].has_right_wall == False:
